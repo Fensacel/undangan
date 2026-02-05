@@ -1,0 +1,237 @@
+/* ==================================
+   WEDDING THEME - ROMANTIC PINK
+   ================================== */
+
+/* ============ Wedding Color Variables ============ */
+:root {
+    --wedding-gold: #c9a961;
+    --wedding-rose: #e8b4b8;
+    --wedding-cream: #fdf8f3;
+    --wedding-pink: #fce4ec;
+    --wedding-pink-dark: #f8bbd9;
+}
+
+/* ============ FORCE PINK BACKGROUND FOR ALL MODES ============ */
+body {
+    background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 50%, #fce4ec 100%) !important;
+}
+
+html[data-bs-theme="dark"] body {
+    background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 50%, #fce4ec 100%) !important;
+}
+
+html[data-bs-theme="dark"] {
+    --bs-body-bg: #fce4ec !important;
+    --bs-body-color: #4a3f35 !important;
+}
+
+/* Dark mode text color fix */
+html[data-bs-theme="dark"] body,
+html[data-bs-theme="dark"] p,
+html[data-bs-theme="dark"] span,
+html[data-bs-theme="dark"] div,
+html[data-bs-theme="dark"] small,
+html[data-bs-theme="dark"] label {
+    color: #4a3f35 !important;
+}
+
+html[data-bs-theme="dark"] h1,
+html[data-bs-theme="dark"] h2,
+html[data-bs-theme="dark"] h3 {
+    color: #8b5a5a !important;
+}
+
+/* Dark mode sections */
+html[data-bs-theme="dark"] .bg-light-dark {
+    background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 100%) !important;
+}
+
+html[data-bs-theme="dark"] .bg-white-black {
+    background: linear-gradient(180deg, #fff0f5 0%, #fce4ec 100%) !important;
+}
+
+html[data-bs-theme="dark"] #welcome {
+    background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 100%) !important;
+}
+
+html[data-bs-theme="dark"] #loading {
+    background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 100%) !important;
+}
+
+html[data-bs-theme="dark"] .navbar {
+    background: rgba(252, 228, 236, 0.95) !important;
+    border-top: 2px solid var(--wedding-gold) !important;
+}
+
+html[data-bs-theme="dark"] .nav-link {
+    color: #8b5a5a !important;
+}
+
+html[data-bs-theme="dark"] .bg-theme-auto {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(201, 169, 97, 0.3) !important;
+}
+
+html[data-bs-theme="dark"] .btn-outline-auto {
+    border-color: var(--wedding-gold) !important;
+    color: #8b5a5a !important;
+}
+
+html[data-bs-theme="dark"] .btn-light {
+    background: linear-gradient(135deg, #c9a961 0%, #d4a574 100%) !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+html[data-bs-theme="dark"] .color-theme-svg {
+    color: #fce4ec !important;
+    background-color: #fff0f5 !important;
+}
+
+html[data-bs-theme="dark"] .border {
+    border-color: rgba(201, 169, 97, 0.3) !important;
+}
+
+html[data-bs-theme="dark"] .form-control,
+html[data-bs-theme="dark"] .form-select {
+    background: #fff !important;
+    color: #4a3f35 !important;
+    border-color: rgba(201, 169, 97, 0.3) !important;
+}
+
+html[data-bs-theme="dark"] .text-secondary {
+    color: #8b7b6b !important;
+}
+
+/* ============ Font Esthetic Enhancement ============ */
+.font-esthetic {
+    color: var(--wedding-gold) !important;
+    -webkit-text-fill-color: var(--wedding-gold) !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* ============ Light Theme Backgrounds ============ */
+html[data-bs-theme="light"] .bg-light-dark {
+    background: linear-gradient(180deg, #fdf8f3 0%, #f8f0e8 100%) !important;
+}
+
+html[data-bs-theme="light"] .bg-white-black {
+    background: linear-gradient(180deg, #fffef9 0%, #fdf8f3 100%) !important;
+}
+
+/* ============ Theme Cards ============ */
+html[data-bs-theme="light"] .bg-theme-auto {
+    background: rgba(255,255,255,0.95) !important;
+    border: 1px solid rgba(201, 169, 97, 0.2) !important;
+}
+
+html[data-bs-theme="dark"] .bg-theme-auto {
+    border: 1px solid rgba(201, 169, 97, 0.15) !important;
+}
+
+/* ============ Enhanced Buttons ============ */
+html[data-bs-theme="light"] .btn-outline-auto {
+    border-color: var(--wedding-gold) !important;
+    color: #8b7355 !important;
+}
+
+html[data-bs-theme="light"] .btn-outline-auto:hover {
+    background: var(--wedding-gold) !important;
+    color: #fff !important;
+    border-color: var(--wedding-gold) !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #c9a961 0%, #d4a574 100%) !important;
+    border: none !important;
+}
+
+/* ============ Enhanced Images ============ */
+.img-center-crop {
+    border: 3px solid var(--wedding-gold) !important;
+    box-shadow: 0 4px 15px rgba(201, 169, 97, 0.2);
+}
+
+/* ============ Wave Separator ============ */
+html[data-bs-theme="light"] .color-theme-svg {
+    color: #fffef9 !important;
+}
+
+/* ============ Navbar Enhancement ============ */
+html[data-bs-theme="light"] .navbar {
+    background: rgba(253,248,243,0.95) !important;
+    border-top: 2px solid var(--wedding-gold) !important;
+}
+
+html[data-bs-theme="dark"] .navbar {
+    border-top: 2px solid var(--wedding-gold) !important;
+}
+
+html[data-bs-theme="light"] .nav-link.active,
+html[data-bs-theme="light"] .nav-link:hover {
+    color: var(--wedding-gold) !important;
+}
+
+/* ============ Welcome Page ============ */
+html[data-bs-theme="light"] #welcome {
+    background: linear-gradient(180deg, #fdf8f3 0%, #f5ebe0 100%) !important;
+}
+
+html[data-bs-theme="light"] #welcome .btn-light {
+    background: linear-gradient(135deg, #c9a961 0%, #d4a574 100%) !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+/* ============ Loading Page ============ */
+html[data-bs-theme="light"] #loading {
+    background: linear-gradient(180deg, #fdf8f3 0%, #f5ebe0 100%) !important;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #c9a961 0%, #d4a574 100%) !important;
+}
+
+/* ============ Love Hearts Color ============ */
+svg[data-class="animate-love"] {
+    color: var(--wedding-rose) !important;
+}
+
+/* ============ Form Enhancement ============ */
+html[data-bs-theme="light"] .form-control:focus,
+html[data-bs-theme="light"] .form-select:focus {
+    border-color: var(--wedding-gold) !important;
+    box-shadow: 0 0 0 2px rgba(201, 169, 97, 0.15) !important;
+}
+
+/* ============ Countdown Timer ============ */
+html[data-bs-theme="light"] .border.rounded-pill.shadow {
+    background: linear-gradient(135deg, #fdf8f3 0%, #f5ebe0 100%) !important;
+    border: 2px solid var(--wedding-gold) !important;
+}
+
+/* ============ Gallery Carousel ============ */
+.carousel-indicators button.active {
+    background-color: var(--wedding-gold) !important;
+}
+
+/* ============ Modal Enhancement ============ */
+html[data-bs-theme="light"] .modal-content {
+    background: #fdf8f3 !important;
+    border: 1px solid rgba(201, 169, 97, 0.3) !important;
+}
+
+/* ============ Alert Info ============ */
+html[data-bs-theme="light"] .alert-info {
+    background: rgba(232, 180, 184, 0.15) !important;
+    border-color: var(--wedding-gold) !important;
+}
+
+/* ============ Scroll Indicator ============ */
+.mouse-animation {
+    border-color: var(--wedding-gold) !important;
+}
+
+.scroll-animation {
+    background: var(--wedding-gold) !important;
+}

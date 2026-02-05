@@ -10,7 +10,7 @@ import { lang } from '../../common/language.js';
 import { storage } from '../../common/storage.js';
 import { session } from '../../common/session.js';
 import { offline } from '../../common/offline.js';
-import { comment } from '../components/comment.js';
+
 import * as confetti from '../../libs/confetti.js';
 import { pool } from '../../connection/request.js';
 
@@ -319,7 +319,7 @@ export const guest = (() => {
     const pageLoaded = () => {
         lang.init();
         offline.init();
-        comment.init();
+
         progress.init();
 
         config = storage('config');
@@ -340,8 +340,7 @@ export const guest = (() => {
         });
 
         if (!token || token.length <= 0) {
-            document.getElementById('comment')?.remove();
-            document.querySelector('a.nav-link[href="#comment"]')?.closest('li.nav-item')?.remove();
+
 
             vid.load();
             img.load();
@@ -353,7 +352,7 @@ export const guest = (() => {
             // add 2 progress for config and comment.
             // before img.load();
             progress.add();
-            progress.add();
+
 
             // if don't have data-src.
             if (!img.hasDataSrc()) {
@@ -372,9 +371,7 @@ export const guest = (() => {
                 aud.load();
                 lib.load({ confetti: data.is_confetti_animation });
 
-                comment.show()
-                    .then(() => progress.complete('comment'))
-                    .catch(() => progress.invalid('comment'));
+
 
             }).catch(() => progress.invalid('config'));
         }
@@ -392,7 +389,7 @@ export const guest = (() => {
             storage('owns').clear();
             storage('likes').clear();
             storage('session').clear();
-            storage('comment').clear();
+
         }
 
         window.addEventListener('load', () => {
@@ -408,7 +405,7 @@ export const guest = (() => {
         return {
             util,
             theme,
-            comment,
+
             guest: {
                 open,
                 modal,

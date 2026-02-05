@@ -194,6 +194,10 @@ export const comment = (() => {
      */
     const show = () => {
 
+        if (!comments) {
+            return Promise.resolve();
+        }
+
         // remove all event listener.
         lastRender.forEach((u) => {
             like.removeListener(u);
@@ -672,6 +676,10 @@ export const comment = (() => {
         pagination.init();
 
         comments = document.getElementById('comments');
+        if (!comments) {
+            return;
+        }
+
         comments.addEventListener('undangan.comment.show', show);
 
         owns = storage('owns');
