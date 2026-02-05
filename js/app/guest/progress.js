@@ -44,7 +44,7 @@ export const progress = (() => {
         }
 
         loaded += 1;
-        info.innerText = `Loading ${type} ${skip ? 'skipped' : 'complete'} ${showInformation()}`;
+        info.innerText = `${parseInt((loaded / total) * 100).toFixed(0)}%`;
         bar.style.width = Math.min((loaded / total) * 100, 100).toString() + '%';
 
         if (loaded === total) {
@@ -62,7 +62,7 @@ export const progress = (() => {
         if (valid) {
             valid = false;
             bar.style.backgroundColor = 'red';
-            info.innerText = `Error loading ${type} ${showInformation()}`;
+            info.innerText = `${parseInt((loaded / total) * 100).toFixed(0)}%`;
             document.dispatchEvent(new Event('undangan.progress.invalid'));
         }
     };

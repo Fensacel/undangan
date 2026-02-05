@@ -169,11 +169,33 @@ export const guest = (() => {
         slide();
         theme.spyTop();
 
-        confetti.basicAnimation();
-        util.timeOut(confetti.openAnimation, 1500);
+        if (document.body.getAttribute('data-confetti') === 'true') {
+            confetti.basicAnimation();
+            util.timeOut(confetti.openAnimation, 1500);
+        }
+
+        // Animasi wiggle pada tombol
+        const btn = document.getElementById('open-invitation-btn');
+        if (btn) {
+            btn.classList.add('btn-wiggle');
+        }
+
+        // Smooth fade animation
+        const welcomeEl = document.getElementById('welcome');
+        const rootEl = document.getElementById('root');
+
+        util.timeOut(() => {
+            // Fade out welcome page
+            welcomeEl.style.transition = 'opacity 0.8s ease-out';
+            welcomeEl.style.opacity = '0';
+
+            // Fade in main content
+            rootEl.style.transition = 'opacity 1s ease-in';
+            rootEl.style.opacity = '1';
+        }, 300);
 
         document.dispatchEvent(new Event('undangan.open'));
-        util.changeOpacity(document.getElementById('welcome'), false).then((el) => el.remove());
+        util.timeOut(() => welcomeEl.remove(), 1100);
     };
 
     /**
