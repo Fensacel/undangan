@@ -77,6 +77,13 @@ export const audio = (() => {
             }
         });
 
+        // Auto-pause music when user leaves the page or switches tabs
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden && isPlay) {
+                pause();
+            }
+        });
+
         music.addEventListener('offline', pause);
         music.addEventListener('click', () => isPlay ? pause() : play());
     };
