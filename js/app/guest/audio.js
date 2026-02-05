@@ -84,6 +84,19 @@ export const audio = (() => {
             }
         });
 
+        // Additional events for mobile browsers (when app is minimized/closed)
+        window.addEventListener('blur', () => {
+            if (isPlay) {
+                pause();
+            }
+        });
+
+        window.addEventListener('pagehide', () => {
+            if (isPlay) {
+                pause();
+            }
+        });
+
         music.addEventListener('offline', pause);
         music.addEventListener('click', () => isPlay ? pause() : play());
     };
