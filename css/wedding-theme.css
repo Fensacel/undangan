@@ -16,92 +16,11 @@ body {
     background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 50%, #fce4ec 100%) !important;
 }
 
-html[data-bs-theme="dark"] body {
-    background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 50%, #fce4ec 100%) !important;
-}
 
-html[data-bs-theme="dark"] {
-    --bs-body-bg: #fce4ec !important;
-    --bs-body-color: #4a3f35 !important;
-}
 
-/* Dark mode text color fix */
-html[data-bs-theme="dark"] body,
-html[data-bs-theme="dark"] p,
-html[data-bs-theme="dark"] span,
-html[data-bs-theme="dark"] div,
-html[data-bs-theme="dark"] small,
-html[data-bs-theme="dark"] label {
-    color: #4a3f35 !important;
-}
 
-html[data-bs-theme="dark"] h1,
-html[data-bs-theme="dark"] h2,
-html[data-bs-theme="dark"] h3 {
-    color: #8b5a5a !important;
-}
 
-/* Dark mode sections */
-html[data-bs-theme="dark"] .bg-light-dark {
-    background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 100%) !important;
-}
 
-html[data-bs-theme="dark"] .bg-white-black {
-    background: linear-gradient(180deg, #fff0f5 0%, #fce4ec 100%) !important;
-}
-
-html[data-bs-theme="dark"] #welcome {
-    background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 100%) !important;
-}
-
-html[data-bs-theme="dark"] #loading {
-    background: linear-gradient(180deg, #fce4ec 0%, #f8bbd9 100%) !important;
-}
-
-html[data-bs-theme="dark"] .navbar {
-    background: rgba(252, 228, 236, 0.95) !important;
-    border-top: 2px solid var(--wedding-gold) !important;
-}
-
-html[data-bs-theme="dark"] .nav-link {
-    color: #8b5a5a !important;
-}
-
-html[data-bs-theme="dark"] .bg-theme-auto {
-    background: rgba(255, 255, 255, 0.9) !important;
-    border: 1px solid rgba(201, 169, 97, 0.3) !important;
-}
-
-html[data-bs-theme="dark"] .btn-outline-auto {
-    border-color: var(--wedding-gold) !important;
-    color: #8b5a5a !important;
-}
-
-html[data-bs-theme="dark"] .btn-light {
-    background: linear-gradient(135deg, #c9a961 0%, #d4a574 100%) !important;
-    border: none !important;
-    color: #fff !important;
-}
-
-html[data-bs-theme="dark"] .color-theme-svg {
-    color: #fce4ec !important;
-    background-color: #fff0f5 !important;
-}
-
-html[data-bs-theme="dark"] .border {
-    border-color: rgba(201, 169, 97, 0.3) !important;
-}
-
-html[data-bs-theme="dark"] .form-control,
-html[data-bs-theme="dark"] .form-select {
-    background: #fff !important;
-    color: #4a3f35 !important;
-    border-color: rgba(201, 169, 97, 0.3) !important;
-}
-
-html[data-bs-theme="dark"] .text-secondary {
-    color: #8b7b6b !important;
-}
 
 /* ============ Font Esthetic Enhancement ============ */
 .font-esthetic {
